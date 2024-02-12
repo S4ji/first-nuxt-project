@@ -1,5 +1,8 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { resolve } from "path";
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  css: ['~/assets/scss/main.scss']
+  devtools: { enabled: false },
+  css: ['~/assets/scss/main.scss'],
+  alias :{
+    "@": resolve( __dirname ,"/")
+  }
 })
