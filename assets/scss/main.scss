@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    //Cacher la scrollbar
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+//cacher la scrollbar sur chrome
+body::-webkit-scrollbar {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit ;
+}
+
+
+.card {
+    background-color: blueviolet;
+    padding: 1rem;
+    border-radius: 25px;
+    overflow: scroll;
+    max-height: 100vh;
+    min-height: 100vh;
+    width: 350px;
+}
+
+.card p {
+    font-weight: 700;
+
+}
+
+@media only screen and (min-width: 768px){
+}
+

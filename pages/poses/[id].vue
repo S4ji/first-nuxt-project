@@ -8,18 +8,18 @@ const { data: categories } = await useFetch('https://yoga-api-nzy4.onrender.com/
 
 <template>
   <div>
-    <ul v-if="categories">
+    <ul class="card-container" v-if="categories">
       <li v-for="category in categories" :key="category.id">
         <div v-if="category.poses && category.poses[route.params.id]">
-          <img :src="category.poses[route.params.id].url_png" alt="">
-          <ul>
-            <li>{{ category.poses[route.params.id].pose_benefits }}</li>
-            <li>{{ category.poses[route.params.id].category_name }}</li>
-            <li>{{ category.poses[route.params.id].english_name }}</li>
-            <li>{{ category.poses[route.params.id].sanskrit_name_adapted }}</li>
-            <li>{{ category.poses[route.params.id].translation_name }}</li>
-            <li>{{ category.poses[route.params.id].pose_description }}</li>
-            <li>{{ category.poses[route.params.id].pose_benefits }}</li>
+          
+          <ul class="card">
+            <li><img :src="category.poses[route.params.id].url_png" alt=""></li>
+            <li><p>Category :</p>{{ category.poses[route.params.id].category_name }}</li>
+            <li><p>English Name:</p>{{ category.poses[route.params.id].english_name }}</li>
+            <li><p>Sanskrit Name Adapted:</p>{{ category.poses[route.params.id].sanskrit_name_adapted }}</li>
+            <li><p>Translation:</p>{{ category.poses[route.params.id].translation_name }}</li>
+            <li><p>Description :</p>{{ category.poses[route.params.id].pose_description }}</li>
+            <li><p>Pose Benefit :</p>{{ category.poses[route.params.id].pose_benefits }}</li>
           </ul>
         </div>
       </li>
@@ -32,4 +32,6 @@ const { data: categories } = await useFetch('https://yoga-api-nzy4.onrender.com/
 *{
     list-style:none;
 }
+
+
 </style>
