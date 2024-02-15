@@ -10,9 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@capacitor/android": "^5.7.0",
+    "@capacitor/core": "^5.7.0",
+    "@capacitor/ios": "^5.7.0",
     "nuxt": "^3.10.0",
     "sass": "^1.70.0",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^5.7.0"
   }
 }

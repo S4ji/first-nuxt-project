@@ -40,9 +40,15 @@ a:visited {
     padding: 1rem;
     border-radius: 25px;
     overflow: scroll;
-    max-height: 100vh;
-    min-height: 100vh;
+    max-height: 98vh;
+    min-height: 98vh;
     width: 350px;
+    margin-bottom: 1rem;
+}
+
+.card-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
 }
 
 .card p {
